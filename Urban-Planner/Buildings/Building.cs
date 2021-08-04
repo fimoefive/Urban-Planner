@@ -31,10 +31,11 @@ namespace Urban_Planner.Buildings
 
         public Building(string address)
         {
-            _designer = "Martin";
+            _designer = "Martin Sisk";
             _address = address;
             Construct();
         }
+
         public void Purchase(string owner)
         {
             _owner = owner;
@@ -49,11 +50,11 @@ namespace Urban_Planner.Buildings
         // Print Building Fields
         public void BuildingInfo()
         {
-            Construct.WriteLine();
-            Construct.WriteLine();
-            Construct.WriteLine();
-            Construct.WriteLine();
-            Construct.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
 
         }
 
