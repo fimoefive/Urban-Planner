@@ -26,15 +26,16 @@ namespace Urban_Planner.Buildings
         // Constructor
         public void Construct()
         {
+            _designer = "Martin Sisk";
             _dateConstructed = DateTime.Now;
         }
 
         public Building(string address)
         {
-            _designer = "Martin";
             _address = address;
             Construct();
         }
+
         public void Purchase(string owner)
         {
             _owner = owner;
@@ -49,11 +50,11 @@ namespace Urban_Planner.Buildings
         // Print Building Fields
         public void BuildingInfo()
         {
-            Construct.WriteLine();
-            Construct.WriteLine();
-            Construct.WriteLine();
-            Construct.WriteLine();
-            Construct.WriteLine();
+            Console.WriteLine($"\n\nBuilding address: {_address}");
+            Console.WriteLine($"Designed by: {_designer}");
+            Console.WriteLine($"Constructed: {_dateConstructed}");
+            Console.WriteLine($"Owner by: {_owner}");
+            Console.WriteLine($"{Volume} cubic meters of space");
 
         }
 
