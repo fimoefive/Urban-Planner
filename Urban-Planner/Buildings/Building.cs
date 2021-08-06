@@ -9,6 +9,7 @@ namespace Urban_Planner.Buildings
     class Building
     {
         // Public Properties
+        public  string BuildingName { get; set; }
         public int Stories { get; set; }
         public double Width { get; set; }
         public double Depth { get; set; }
@@ -30,8 +31,9 @@ namespace Urban_Planner.Buildings
             _dateConstructed = DateTime.Now;
         }
 
-        public Building(string address)
+        public Building(string buildingName, string address)
         {
+            BuildingName = buildingName;
             _address = address;
             Construct();
         }
@@ -50,10 +52,11 @@ namespace Urban_Planner.Buildings
         // Print Building Fields
         public void BuildingInfo()
         {
-            Console.WriteLine($"\n\nBuilding address: {_address}");
+            Console.WriteLine($"\n\nBuilding: {BuildingName}");
+            Console.WriteLine($"Building address: {_address}");
             Console.WriteLine($"Designed by: {_designer}");
             Console.WriteLine($"Constructed: {_dateConstructed}");
-            Console.WriteLine($"Owner by: {_owner}");
+            Console.WriteLine($"Purchase Owner: {_owner}");
             Console.WriteLine($"{Volume} cubic meters of space");
 
         }

@@ -9,7 +9,7 @@ namespace Urban_Planner
         {
             Console.WriteLine("Urban Planner");
 
-            var buildingExamp = new Building("512 8th Avenue");
+            var buildingExamp = new Building("Lower 8th Ave. Apartment", "512 8th Avenue");
 
             buildingExamp.Stories = 6;
             buildingExamp.Width = 18;
@@ -18,7 +18,7 @@ namespace Urban_Planner
             buildingExamp.Purchase("Snow White");
             buildingExamp.BuildingInfo();
 
-            var buildingWest = new Building("1414 Creekwood Lane");
+            var buildingWest = new Building("New House", "1414 Creekwood Lane");
 
             buildingWest.Stories = 3;
             buildingWest.Width = 20;
@@ -26,6 +26,12 @@ namespace Urban_Planner
             buildingWest.SetDeminsions();
             buildingWest.Purchase("Whitney");
             buildingWest.BuildingInfo();
+
+            City newCity = new City("Nashville", "Cooper", 1806);
+            newCity.AddBuilding(buildingExamp);
+            newCity.AddBuilding(buildingWest);
+
+            newCity.CreateCity();
 
 
         }
