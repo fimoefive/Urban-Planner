@@ -22,14 +22,19 @@ namespace Urban_Planner.Buildings
 
         public void CreateCity()
         {
-            Console.WriteLine("");
+            Console.WriteLine($"The current buildings in the {Name}.");
             foreach (Building building in Buildings)
             {
-                Console.WriteLine("");
+                Console.WriteLine(building.Name);
             }
         }
 
-
+        public City(string name, string mayor, int year)
+        {
+            Name = name;
+            Mayor = mayor;
+            Year = year;
+        }
 
 
 
