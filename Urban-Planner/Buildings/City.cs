@@ -20,6 +20,16 @@ namespace Urban_Planner.Buildings
             Buildings.Add(building);
         }
 
+        public void CreateCity()
+        {
+            Console.WriteLine("");
+            foreach (Building building in Buildings)
+            {
+                Console.WriteLine("");
+            }
+        }
+
+
 
 
 
