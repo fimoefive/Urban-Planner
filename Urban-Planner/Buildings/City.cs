@@ -22,10 +22,11 @@ namespace Urban_Planner.Buildings
 
         public void CreateCity()
         {
-            Console.WriteLine($"\n\nThe new buildings in the city of {Name}.");
+            Console.WriteLine($"\n\nThe new buildings constructed in the city of {Name}.");
             foreach (Building building in Buildings)
             {
-                Console.WriteLine(building.BuildingName);
+                Console.WriteLine($"\n\nBuilding: {building.BuildingName}");
+                Console.WriteLine($"Space: {building.Volume}");
             }
         }
 
