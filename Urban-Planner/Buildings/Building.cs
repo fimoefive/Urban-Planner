@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Urban_Planner.Buildings
 {
@@ -24,13 +20,14 @@ namespace Urban_Planner.Buildings
         string _owner;  // This will store the name of the person who owns the building.
 
 
-        // Constructor
+        // Building Method
         public void Construct()
         {
             _designer = "Martin Sisk";
             _dateConstructed = DateTime.Now;
         }
 
+        // Constructor Method
         public Building(string buildingName, string address)
         {
             BuildingName = buildingName;
@@ -38,6 +35,7 @@ namespace Urban_Planner.Buildings
             Construct();
         }
 
+        // Purchase Method
         public void Purchase(string owner)
         {
             _owner = owner;
