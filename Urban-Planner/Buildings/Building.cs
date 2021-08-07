@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Urban_Planner.Buildings
 {
     class Building
     {
         // Public Properties
+        public  string BuildingName { get; set; }
         public int Stories { get; set; }
         public double Width { get; set; }
         public double Depth { get; set; }
@@ -23,19 +20,22 @@ namespace Urban_Planner.Buildings
         string _owner;  // This will store the name of the person who owns the building.
 
 
-        // Constructor
+        // Building Method
         public void Construct()
         {
             _designer = "Martin Sisk";
             _dateConstructed = DateTime.Now;
         }
 
-        public Building(string address)
+        // Constructor Method
+        public Building(string buildingName, string address)
         {
+            BuildingName = buildingName;
             _address = address;
             Construct();
         }
 
+        // Purchase Method
         public void Purchase(string owner)
         {
             _owner = owner;
@@ -50,10 +50,11 @@ namespace Urban_Planner.Buildings
         // Print Building Fields
         public void BuildingInfo()
         {
-            Console.WriteLine($"\n\nBuilding address: {_address}");
+            Console.WriteLine($"\n\nBuilding: {BuildingName}");
+            Console.WriteLine($"Building address: {_address}");
             Console.WriteLine($"Designed by: {_designer}");
             Console.WriteLine($"Constructed: {_dateConstructed}");
-            Console.WriteLine($"Owner by: {_owner}");
+            Console.WriteLine($"Purchase Owner: {_owner}");
             Console.WriteLine($"{Volume} cubic meters of space");
 
         }
